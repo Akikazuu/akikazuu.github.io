@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: akikazuu.github.io
+Token: 11b72b3220c9781e885413a228f1723c10674e8582499bcf74aa628e5e3e7d4f
