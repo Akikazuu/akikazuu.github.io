@@ -8,37 +8,83 @@
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
     <script src="https://kit.fontawesome.com/aea431f007.js" crossorigin="anonymous"></script>
   </head>
-
+  <style>
+    .tooltip {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 140px;
+      background-color: #555;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px;
+      position: absolute;
+      z-index: 1;
+      bottom: 150%;
+      left: 50%;
+      margin-left: -75px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    
+    .tooltip .tooltiptext::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: #555 transparent transparent transparent;
+    }
+    
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+    }
+    </style>
   <body>
-       <div id="particles-js"></div>
+    <div id="particles-js"></div>
 
       <div class="vertical-center">
         <div class="container">
-            <div class="container about">
-              <div class="row justify-content-md-center d-flex">
-                
-                <div class="col text-white">
-                  <div class="col-md-4 mx-auto">
-    		            <div class="card profile-card-1 bg-transparent">
-                      <img src="Black.jpg" class="background"/>
-                      <img src="ano.png" alt="profile-image" class="profile"/>
-                          <div class="card-content">
-                              <h2>Quentin<small>Cybersecurity enthusiast</small></h3>
-                                  <div class="icon-block">
-                                      <a href="https://www.linkedin.com/in/quentin-chalvin/"><i class="fab fa-linkedin-in"></i></a>
-                                      <a href="https://www.root-me.org/Akikazu"><i class="fas fa-terminal"></i></a>
-                                      <a href="mailto:galaxiem104@gmail.com"><i class="fas fa-envelope"></i></a>
-                                      <a onclick="myFunction()" id="myInput" value="Akikazu#1604"><i class="fab fa-discord"></i></a>
-                                  </div>
-                           </div>
+          <div class="container about">
+            <div class="row justify-content-md-center d-flex">
+              
+              <div class="col text-white">
+                <div class="col-md-4 mx-auto">
+    		          <div class="card profile-card-1 bg-transparent">
+                    <img src="Black.jpg" class="background"/>
+                    <img src="ano.png" alt="profile-image" class="profile"/>
+                    <div class="card-content">
+                      <h2>Quentin<small>Cybersecurity enthusiast</small></h3>
+                      <div class="icon-block">
+                        <a href="https://www.linkedin.com/in/quentin-chalvin/"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.root-me.org/Akikazu"><i class="fas fa-terminal"></i></a>
+                        <a href="mailto:galaxiem104@gmail.com"><i class="fas fa-envelope"></i></a>
+                        <a ><i class="fab fa-discord"></i></a>
+                        <input type="text" value="Hello World" id="myInput">
+                        <div class="tooltip">
+                          <button onclick="myFunction()" onmouseout="outFunc()">
+                            <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                            Copy text
+                            </button>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-  
               </div>
             </div>
+          </div>
         </div>
       </div>
+    </div>
+
 
     
   </body>
@@ -47,14 +93,16 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
   <script type="text/javascript">
     particlesJS.load('particles-js', 'particlesjs.json', function() {
-        console.log('callback - particles.js config loaded');
+      console.log('callback - particles.js config loaded');
     });
     
     function myFunction() {
-      var copyText = document.getElementById("myInput");
-      document.execCommand("copy");
-      alert("Copied the text: " + copyText.value);
-    }
+    var copyText = document.getElementById("test");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999)
+    document.execCommand("copy");
+    alert("Copied the text: " + copyText.value);
+  }
   </script>
 
 </html>
