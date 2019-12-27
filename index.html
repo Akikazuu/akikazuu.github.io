@@ -28,7 +28,7 @@
                                       <a href="https://www.linkedin.com/in/quentin-chalvin/"><i class="fab fa-linkedin-in"></i></a>
                                       <a href="https://www.root-me.org/Akikazu"><i class="fas fa-terminal"></i></a>
                                       <a href="mailto:galaxiem104@gmail.com"><i class="fas fa-envelope"></i></a>
-                                      <a onclick="myFunction()" id="myInput"><i class="fab fa-discord"></i></a>
+                                      <a onclick="myFunction()" id="myInput" value=""Akikazu#1604""><i class="fab fa-discord"></i></a>
                                   </div>
                            </div>
                     </div>
@@ -52,7 +52,7 @@
     
     function myFunction() {
       var copyText = document.getElementById("myInput");
-      copyText.select("Akikazu#1604");
+      copyText.select();
       document.execCommand("copy");
       alert("Copied the text: " + copyText.value);
     }
