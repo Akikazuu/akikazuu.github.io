@@ -33,7 +33,7 @@
                         <a href="https://www.linkedin.com/in/quentin-chalvin/"><i class="fab fa-linkedin-in"></i></a>
                         <a href="https://www.root-me.org/Akikazu"><i class="fas fa-terminal"></i></a>
                         <a href="mailto:galaxiem104@gmail.com"><i class="fas fa-envelope"></i></a>
-                        <a class="test" data-toggle="tooltip" data-placement="right" title="Akikazu#1604"><i class="fab fa-discord"></i></a>
+                        <a class="test" data-toggle="tooltip" data-placement="right" title="Akikazu#1604" id="myInput"><i class="fab fa-discord"></i></a>
                         
 
                       </div>
@@ -60,6 +60,13 @@
     particlesJS.load('particles-js', 'particlesjs.json', function() {
       console.log('callback - particles.js config loaded');
     });
+    function myFunction() {
+      var copyText = document.getElementById("myInput");
+      copyText.select();
+      copyText.setSelectionRange(0, 99999)
+      document.execCommand("copy");
+      alert("Copied the text: " + copyText.title);
+    }
     
   </script>
 
