@@ -78,7 +78,7 @@
       copyText.select();
       copyText.setSelectionRange(0, 99999)
       document.execCommand("copy");
-     
+      console.log(copyText.value)
       Toast.fire({
         icon: 'success',
         title: 'Copied Akikazu#1604 to clipboard'
