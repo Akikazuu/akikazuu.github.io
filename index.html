@@ -61,13 +61,7 @@
     particlesJS.load('particles-js', 'particlesjs.json', function() {
       console.log('callback - particles.js config loaded');
     });
-    
-    function myFunction() {
-      var copyText = document.getElementById("myInput");
-      copyText.select();
-      copyText.setSelectionRange(0, 99999)
-      document.execCommand("copy");
-      const Toast = Swal.mixin({
+    const Toast = Swal.mixin({
         toast: true,
         position: 'top-end',
         showConfirmButton: false,
@@ -77,8 +71,15 @@
           toast.addEventListener('mouseenter', Swal.stopTimer)
           toast.addEventListener('mouseleave', Swal.resumeTimer)
         }
-      })
-
+    })
+    
+    function myFunction() {
+      var copyText = document.getElementById("myInput");
+      console.log(copyText);
+      copyText.select();
+      copyText.setSelectionRange(0, 99999)
+      document.execCommand("copy");
+     
       Toast.fire({
         icon: 'success',
         title: 'Copied Akikazu#1604 to clipboard'
