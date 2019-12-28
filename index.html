@@ -35,7 +35,7 @@
                         <a href="https://www.linkedin.com/in/quentin-chalvin/"><i class="fab fa-linkedin-in"></i></a>
                         <a href="https://www.root-me.org/Akikazu"><i class="fas fa-terminal"></i></a>
                         <a href="mailto:galaxiem104@gmail.com"><i class="fas fa-envelope"></i></a>
-                        <a class="test" data-toggle="tooltip" data-placement="right" title="Akikazu#1604" onclick="myFunction()"><i class="fab fa-discord"></i></a>
+                        <a class="test" data-toggle="tooltip" data-placement="right" title="Akikazu#1604" onclick="setClipboard("Akikazu#1604")"><i class="fab fa-discord"></i></a>
                         <input type="text" value="Akikazu#1604" id="myInput" style="visibility:hidden;">
                       </div>
                     </div>
@@ -72,7 +72,19 @@
           toast.addEventListener('mouseleave', Swal.resumeTimer)
         }
     })
-    
+    function setClipboard(value) {
+        var tempInput = document.createElement("input");
+        tempInput.style = "position: absolute; left: -1000px; top: -1000px";
+        tempInput.value = value;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempInput);
+        Toast.fire({
+          icon: 'success',
+          title: 'Copied Akikazu#1604 to clipboard'
+        })
+    }
     function myFunction() {
       var copyText = document.getElementById("myInput");
       copyText.select();
