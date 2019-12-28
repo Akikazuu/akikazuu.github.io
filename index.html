@@ -12,6 +12,19 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   </head>
+  <style>
+    .test + .tooltip > .tooltip-inner {
+    background-color: #73AD21; 
+    color: #FFFFFF; 
+    border: 1px solid green; 
+    padding: 15px;
+    font-size: 20px;
+  }
+  /* Tooltip on top */
+  .test + .tooltip.top > .tooltip-arrow {
+    border-top: 5px solid green;
+  }
+  </style>
 
   <body>
     <div id="particles-js"></div>
@@ -32,7 +45,7 @@
                         <a href="https://www.linkedin.com/in/quentin-chalvin/"><i class="fab fa-linkedin-in"></i></a>
                         <a href="https://www.root-me.org/Akikazu"><i class="fas fa-terminal"></i></a>
                         <a href="mailto:galaxiem104@gmail.com"><i class="fas fa-envelope"></i></a>
-                        <a data-toggle="tooltip" title="Akikazu#1604"><i class="fab fa-discord"></i></a>
+                        <a class="test" data-toggle="tooltip" title="Akikazu#1604"><i class="fab fa-discord"></i></a>
                         
 
                       </div>
