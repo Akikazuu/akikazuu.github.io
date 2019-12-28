@@ -90,3 +90,13 @@ canvas {
   color:#2E3434;
   text-decoration:none;
 }
+.test + .tooltip > .tooltip-inner {
+    background-color: #73AD21; 
+    color: #FFFFFF; 
+    border: 1px solid green; 
+    padding: 15px;
+    font-size: 20px;
+}
+.test + .tooltip.right > .tooltip-arrow {
+    border-right: 5px solid black;
+}
