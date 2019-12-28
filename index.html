@@ -32,7 +32,7 @@
                         <a href="https://www.linkedin.com/in/quentin-chalvin/"><i class="fab fa-linkedin-in"></i></a>
                         <a href="https://www.root-me.org/Akikazu"><i class="fas fa-terminal"></i></a>
                         <a href="mailto:galaxiem104@gmail.com"><i class="fas fa-envelope"></i></a>
-                        <a class="test" data-toggle="tooltip" data-placement="right" title="Akikazu#1604" id="myInput" onclick="myFunction(this)"><i class="fab fa-discord"></i></a>
+                        <a class="test" data-toggle="tooltip" data-placement="right" title="Akikazu#1604" value="Akikazu#1604" id="myInput" onclick="myFunction(this)"><i class="fab fa-discord"></i></a>
                         
                       </div>
                     </div>
@@ -61,7 +61,7 @@
     function myFunction(element) {
         var range, selection, worked;
       
-        console.log(element.data-original-title);
+        console.log(element.value);
       
         if (document.body.createTextRange) {
           range = document.body.createTextRange();
