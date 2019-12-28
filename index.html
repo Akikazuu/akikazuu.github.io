@@ -34,7 +34,6 @@
                         <a href="mailto:galaxiem104@gmail.com"><i class="fas fa-envelope"></i></a>
                         <a class="test" data-toggle="tooltip" data-placement="right" title="Akikazu#1604" id="myInput" onclick="myFunction(this)"><i class="fab fa-discord"></i></a>
                         
-(
                       </div>
                     </div>
                   </div>
@@ -61,7 +60,9 @@
     });
     function myFunction(element) {
         var range, selection, worked;
-
+      
+        console.log(element);
+      
         if (document.body.createTextRange) {
           range = document.body.createTextRange();
           range.moveToElementText(element);
